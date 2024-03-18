@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="css/registration.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form action="regis.php" method="post">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" id="fn" name="name" placeholder="Enter your name" required>
+          </div>
+          
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" id="num" name="phone" placeholder="Enter your number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="text" id="pass" name="password" placeholder="Enter your password" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Fitness Level</span>
+            <input type="text" id="fl" name="fitnesslevel" placeholder="Beg / Inter / Adv" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Fitness Goal</span>
+            <input type="text" name="fitnessgoal" placeholder="Enter Weight Loss / Weigth Gain" id="fg" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Date Of Birth</span>
+            <input type="date"required name="dob" id="dob">
+          </div>
+        </div>
+        <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1" value="Male">
+          <input type="radio" name="gender" id="dot-2" value="Female">
+          <input type="radio" name="gender" id="dot-3" value="Prefer not to say">
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Male</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Female</span>
+          </label>
+          <label for="dot-3">
+            <span class="dot three"></span>
+            <span class="gender">Prefer not to say</span>
+            </label>
+          </div>
+        </div><br>
+        <button class = "btn" onclick="redirectIfFieldFilled()" ><a href="login.php">Submit</a></button><br>
+        Already have an account <a href="login.html" style="text-decoration: none;">Sign in</a><br>
+        
+      </form>
+    </div>
+  </div>
+
+</body>
+<script>
+  function redirectIfFieldFilled() {
+    const textField = document.getElementById("fn");
+    const textField2 = document.getElementById("pass");
+    const textField3 = document.getElementById("mail");
+    const textField4 = document.getElementById("dat");
+    const textField5 = document.getElementById("num");
+    const textField6 = document.getElementById("fl");
+    const textField7 = document.getElementById("fg");
+    if (textField.value.trim() !== "" && textField2.value.trim() !== "" && textField3.value.trim() !== "" && textField4.value.trim() !== "" && textField5.value.trim() !== "" && textField6.value.trim() !== "" && textField7.value.trim() !== "") {
+      location.href = "index.html";
+    } else {
+      alert("Please fill in the text field!");
+    }
+  }
+  </script>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Mass Index Fitsultancy</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/bmi.css">
+</head>
+<body>
+    <div class="hero_area">
+        <header class="header_section">
+          <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg custom_nav-container ">
+              <a class="navbar-brand" href="index.html">
+                <span>
+                  FitSultancy
+                </span>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                  <ul class="navbar-nav  ">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Home </a>
+                    </li>
+                    <li class="nav-item ">
+                      <a class="nav-link" href="#"> Fitness Plan </a>
+                    </li>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="diet.html">Diet Plan </a>
+                    </li>
+                    <li class="nav-item active">
+                      <div class="dropdown">
+                        <button class="dropbtn">Tools</button>
+                        <div class="dropdown-content">
+                          <a href="bmi.html">BMI</a>
+                          <a href="kgtopd.html">Kg ⇆ Pound</a>
+                          <a href="height.html">Height in cm</a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Blogs.html">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Suppliment.html">Suppliments</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="login.html"> Log In</a>
+                    </li>
+                  </ul>
+                  <div class="user_option">
+                    <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                      
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div class="container">
+            <div class="box">
+              <h1>BMI Calculator</h1>
+              <div class="content">
+    
+    
+                <div class="input">
+                    <label for="height">Age</label>
+                    <input type="text" class="text-input" id="age" autocomplete="off" required/>
+                </div>
+    
+                <div class="gender">
+    
+                    <label class="container">
+                        <input type="radio" name="radio" id="m"><p class="text">Male</p>
+                        <span class="checkmark"></span>
+                      </label>
+    
+    
+                    <label class="container">
+                        <input type="radio" name="radio" id="f" ><p class="text">Female</p>
+                          <span class="checkmark"></span>
+                        </label>
+    
+                </div>
+    
+                <div class="containerHW">
+                <div class="inputH">
+                  <label for="height">Height(cm)</label>
+                  <input type="number" id="height" required>
+                </div>
+    
+                <div class="inputW">
+                  <label for="weight">Weight(kg)</label>
+                  <input type="number" id="weight" required>
+                </div>
+              </div>
+    
+                <button class="calculate" id="submit" onclick="calculate();">Calculate BMI</button>
+              </div>
+              <div class="result">
+                <p>Your BMI is</p>
+                <div id="result">00.00</div>
+                <p class="comment"></p>
+              </div>
+            
+          
+    
+            </div>
+          </div>
+    
+</body>
+<script src="js/bmi.js"></script>
+</html>
